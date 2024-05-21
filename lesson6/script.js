@@ -7,4 +7,4 @@ function removeElement(arr, index) {
     return arr;
 }
 
-removeElement(array, 2);
+removeElement(array, 4);
