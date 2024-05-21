@@ -10,8 +10,6 @@ function filterNumber(arr) {
     const resultsAverage = resultSum / ressFilter.length;
 
     return resultsAverage ;
-
-    
 }
 
 filterNumber(mixedArray)
