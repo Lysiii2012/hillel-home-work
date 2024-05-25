@@ -3,7 +3,7 @@ function resUserInput() {
 
     for (let current = 0; current < attemptsLeft; current++) {
         let promptAnswer = prompt('Введіть число більше 100');
-        let tryWrite = attemptsLeft - current - 1;
+        let tryWrite = attemptsLeft - current ;
 
         if (promptAnswer === null || promptAnswer.trim() === "") {
             console.log(`Давайте введемо ще раз, залишилося: ${tryWrite} спроб`);
