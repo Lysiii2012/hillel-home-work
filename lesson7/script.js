@@ -1,18 +1,11 @@
-function createSum(){
-    let sum = 0;
-
-    return function(value){
-        sum += value;
-        return sum;
+function carrent(f){
+    return function(a){
+        return function(b){
+            return a * b
+        }
     }
 }
 
-const sum = createSum();
+const res = carrent();
 
-console.log(sum(4));  
-
-console.log(sum(6));  
-
-console.log(sum(10));  
-
-console.log(sum(7));  
+console.log(res(5)(2))
