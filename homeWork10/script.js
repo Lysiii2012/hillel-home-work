@@ -17,6 +17,15 @@ const users = {
         }
     ],
     setNewUser: function(name, phone, email) {
+        if (!name || !email) {
+            console.log("Name and email are required.");
+            return;
+        }
+
+        if (!phone) {
+            console.log("Phone number is missing. Defaulting -");
+            phone = '-';
+        }
         const newUser = {
             name: name,
             phone: phone,
