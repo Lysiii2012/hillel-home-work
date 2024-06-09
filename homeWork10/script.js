@@ -1,7 +1,34 @@
-const arrayNums = [1, 3, 55, 85, 0, 1, 4, 6, 3, 5, 6, 102, 33, 102];
+const users = {
+    allUsers: [
+        {
+            name: 'Oleh',
+            phone: '+380991111111',
+            email: 'oleh@gmail.com'
+        },
+        {
+            name: 'Anna',
+            phone: '+380932222222',
+            email: 'anna@gmail.com'
+        },
+        {
+            name: 'Dasha',
+            phone: '+380970000000',
+            email: 'dasha@gmail.com'
+        }
+    ],
+    setNewUser: function(name, phone, email) {
+        const newUser = {
+            name: name,
+            phone: phone,
+            email: email
+        };
+        this.allUsers.push(newUser);
+    },
+    findUser: function(userName) {
+        return this.allUsers.find(user => user.name === userName);
+    }
+};
 
-const doubledNums = arrayNums.filter((num, index, arr) => arr.indexOf(num) !== index);
-
-const uniqueDuplicates = doubledNums.filter((num, index) => doubledNums.indexOf(num) === index)
-
-console.log(uniqueDuplicates)
+console.log(users.findUser("Anna")); 
+users.setNewUser('Alisa', '+385849695496', 'alisa@gmail.com');
+console.log(users.allUsers);
