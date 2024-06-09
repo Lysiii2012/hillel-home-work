@@ -34,7 +34,8 @@ const users = {
         this.allUsers.push(newUser);
     },
     findUser: function(userName) {
-        return this.allUsers.find(user => user.name === userName);
+        const user = this.allUsers.find(user => user.name === userName);
+        return user ? user : `${userName} not found in your contacts`;
     }
 };
 
