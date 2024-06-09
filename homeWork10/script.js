@@ -33,5 +33,4 @@ Company bs: ${this.company.bs}`;
     }
   }
 
-
   console.log(userInfo.getAllInfo())
