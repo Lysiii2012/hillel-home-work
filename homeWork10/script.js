@@ -1,36 +1,7 @@
-const userInfo = {
-    "id": 3,
-    "name": "Clementine Bauch",
-    "username": "Samantha",
-    "email": "Nathan@yesenia.net",
-    "address": {
-      "street": "Douglas Extension",
-      "suite": "Suite 847",
-      "city": "McKenziehaven",
-      "zipcode": "59590-4157",
-      "geo": {
-        "lat": "-68.6102",
-        "lng": "-47.0653"
-      }
-    },
-    "phone": "1-463-123-4447",
-    "website": "ramiro.info",
-    "company": {
-      "name": "Romaguera-Jacobson",
-      "catchPhrase": "Face to face bifurcated interface",
-      "bs": "e-enable strategic applications"
-    },
-    getAllInfo: function() {
-       return `Name: ${this.name},
-Username: ${this.username},
-Email: ${this.email},
-Address: ${this.address.street}, ${this.address.suite}, ${this.address.city}, ${this.address.zipcode},
-Phone: ${this.phone},
-Website: ${this.website},
-Company: ${this.company.name},
-Company catchPhrase: ${this.company.catchPhrase},
-Company bs: ${this.company.bs}`;
-    }
-  }
+const arrayNums = [1, 3, 55, 85, 0, 1, 4, 6, 3, 5, 6, 102, 33, 102];
 
-  console.log(userInfo.getAllInfo())
+const doubledNums = arrayNums.filter((num, index, arr) => arr.indexOf(num) !== index);
+
+const uniqueDuplicates = doubledNums.filter((num, index) => doubledNums.indexOf(num) === index)
+
+console.log(uniqueDuplicates)
